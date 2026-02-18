@@ -8,7 +8,7 @@ The entire ecosystem is powered by **TypeScript**, ensuring maximum reliability 
 
 -   **Frontend:** React with TypeScript, Vite, and Tailwind CSS for a high-performance, responsive UI.
 -   **Backend:** Node.js with Express & TypeScript, providing a scalable and typed API layer.
--   **Database:** PostgreSQL with Prisma ORM (Type-safe database access).
+-   **Database:** MongoDB with Prisma ORM (Type-safe database access).
 -   **Real-time:** Socket.io for live table availability and instant booking notifications.
 -   **Authentication:** JWT-based secure authentication with Role-Based Access Control (RBAC).
 
@@ -50,3 +50,22 @@ The entire ecosystem is powered by **TypeScript**, ensuring maximum reliability 
 -   **Phase 2:** Real-time Booking Engine & Notification Service.
 -   **Phase 3:** Payment Integration & Loyalty Program.
 -   **Phase 4:** Mobile App (React Native) & AI-driven Recommendations.
+---
+
+## 🖼 Visual Architecture
+
+### 1. System Use Cases
+![Use Case Diagram](./images/usecasediagram.png)
+*Visualizes the primary interactions between diners, owners, and the platform.*
+
+### 2. Database Schema (ERD)
+![ER Diagram](./images/erdiagram.png)
+*The relational structure ensuring data integrity across users, bookings, and payments.*
+
+### 3. Application Class Structure
+![Class Diagram](./images/classDiagram.png)
+*High-level TypeScript class hierarchy for the backend ecosystem.*
+
+### 4. Booking Sequence Flow
+![Sequence Diagram](./images/sequence.png)
+*Detailed transaction flow for a secure, real-time table reservation.*
