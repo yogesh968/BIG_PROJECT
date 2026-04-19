@@ -20,7 +20,7 @@ const API_BASE = 'http://localhost:5001/api';
 /* ═══ IMAGES ═══ */
 const RESTAURANT_IMAGES:Record<string, string> = {
   'Aurélien': '/images/aurelien_french_dining_1776609755659.png',
-  'Sakura House': '/images/omakase_sushi_luxury_1776610014582.png',
+  'Sakura House': '/images/chef_craft.png',
   'Botanica': '/images/botanica_garden_dining_1776610219931.png',
   'default': 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200'
 };
