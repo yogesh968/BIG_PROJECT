@@ -40,7 +40,7 @@ export const getMyReservations = async (req: Request, res: Response) => {
   try {
     const { customerId } = req.params;
     const reservations = await prisma.reservation.findMany({
-      where: { customerId: customerId as string },
+      where: { customerId: String(customerId) },
       include: {
         table: {
           include: { restaurant: true }
@@ -59,7 +59,7 @@ export const updateReservationStatus = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { status } = req.body;
     const updated = await prisma.reservation.update({
-      where: { id: id as string },
+      where: { id: String(id) },
       data: { status }
     });
     res.json(updated);

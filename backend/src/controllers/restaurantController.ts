@@ -20,7 +20,7 @@ export const getRestaurantById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const restaurant = await prisma.restaurant.findUnique({
-      where: { id: id as string },
+      where: { id: String(id) },
       include: {
         tables: true,
         menuItems: true,
