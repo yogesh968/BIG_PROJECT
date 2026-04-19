@@ -1,34 +1,17 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { 
-  UtensilsCrossed as LogoIcon, 
-  Search, 
-  Bell, 
-  User, 
-  LogOut, 
   MapPin, 
   Star, 
-  Clock, 
-  CreditCard, 
   Award, 
-  ChevronRight, 
   Calendar, 
-  Target,
-  Sparkles,
+  Sparkles, 
   Zap,
-  Coffee,
-  Pizza,
-  Store,
-  ArrowRight,
-  Menu as MenuIcon,
-  X,
-  Plus,
-  Minus,
   MessageCircle,
   Heart,
   TrendingUp,
-  ShieldCheck,
-  Check
+  ShieldCheck
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
