@@ -11,7 +11,10 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: [
+      'http://localhost:5173', 
+      'https://big-project-git-main-yogesh-kumars-projects-b37dbb16.vercel.app'
+    ],
     methods: ['GET', 'POST'],
   },
 });
@@ -20,7 +23,13 @@ import authRoutes from './routes/authRoutes';
 import restaurantRoutes from './routes/restaurantRoutes';
 import reservationRoutes from './routes/reservationRoutes';
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173', 
+    'https://big-project-git-main-yogesh-kumars-projects-b37dbb16.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
