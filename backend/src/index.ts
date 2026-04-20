@@ -9,12 +9,14 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.CLIENT_URL
+].filter(Boolean) as string[];
+
 const io = new Server(server, {
   cors: {
-    origin: [
-      'http://localhost:5173', 
-      'https://big-project-git-main-yogesh-kumars-projects-b37dbb16.vercel.app'
-    ],
+    origin: allowedOrigins,
     methods: ['GET', 'POST'],
   },
 });
@@ -24,10 +26,7 @@ import restaurantRoutes from './routes/restaurantRoutes';
 import reservationRoutes from './routes/reservationRoutes';
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173', 
-    'https://big-project-git-main-yogesh-kumars-projects-b37dbb16.vercel.app'
-  ],
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(express.json());

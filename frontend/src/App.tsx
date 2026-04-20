@@ -15,7 +15,8 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_BASE = 'http://localhost:5001/api';
+const API_BASE = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5001/api';
+console.log('Current API Base:', API_BASE);
 
 /* ═══ IMAGES ═══ */
 const RESTAURANT_IMAGES:Record<string, string> = {
